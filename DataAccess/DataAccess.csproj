@@ -53,9 +53,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Abstract\IAboutDAL.cs" />
+    <Compile Include="Abstract\ICategoryDAL.cs" />
+    <Compile Include="Abstract\IContactDAL.cs" />
+    <Compile Include="Abstract\IContentDAL.cs" />
+    <Compile Include="Abstract\IHeadingDAL.cs" />
     <Compile Include="Abstract\IRepository.cs" />
+    <Compile Include="Abstract\IWriterDAL.cs" />
     <Compile Include="Concrete\MvcContext.cs" />
-    <Compile Include="Concrete\Repositories\CategoryRepository.cs" />
+    <Compile Include="Concrete\Repositories\GenericRepository.cs" />
     <Compile Include="Migrations\202105170734074_mig1.cs" />
     <Compile Include="Migrations\202105170734074_mig1.designer.cs">
       <DependentUpon>202105170734074_mig1.cs</DependentUpon>
@@ -70,10 +76,6 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\BusinessLayer\BusinessLayer.csproj">
-      <Project>{33a3d6c2-abc6-461f-bbca-41de5d3238e8}</Project>
-      <Name>BusinessLayer</Name>
-    </ProjectReference>
     <ProjectReference Include="..\EntityLayer\EntityLayer.csproj">
       <Project>{60AE4EF0-350B-4A23-973B-2223FA9EC172}</Project>
       <Name>EntityLayer</Name>
