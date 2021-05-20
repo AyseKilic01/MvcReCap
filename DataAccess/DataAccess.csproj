@@ -80,10 +80,6 @@
       <Project>{60AE4EF0-350B-4A23-973B-2223FA9EC172}</Project>
       <Name>EntityLayer</Name>
     </ProjectReference>
-    <ProjectReference Include="..\MvcProject\MvcProject.csproj">
-      <Project>{84a5bb9d-2078-4463-913e-6e4e975c68a6}</Project>
-      <Name>MvcProject</Name>
-    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Migrations\202105170734074_mig1.resx">
