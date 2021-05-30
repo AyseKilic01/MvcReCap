@@ -11,9 +11,17 @@ namespace BusinessLayer.Concrete
    public class CategoryManager
     {
         GenericRepository<Category> repository = new GenericRepository<Category>();
+        public List<Category> GetAllBL(Category p)
+        {
+            return repository.List();
+        }
         public List<Category> GetAllBL()
         {
             return repository.List();
+        }
+        public void CategoryAdd(Category p)
+        {
+            repository.Insert(p);
         }
     }
 }

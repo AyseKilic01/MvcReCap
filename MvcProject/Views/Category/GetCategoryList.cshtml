@@ -1,4 +1,4 @@
-﻿
+﻿@using EntityLayer.Concrete
 @{
     Layout = null;
 }
@@ -8,10 +8,28 @@
 <html>
 <head>
     <meta name="viewport" content="width=device-width" />
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
     <title>GetCategoryList</title>
 </head>
 <body>
-    <div> 
+    <div>
     </div>
+    <table class="table table-hover">
+        <tr>
+            <th>ID</th>
+            <th>Ad</th>
+            <th>Durum</th>
+        </tr>
+        @foreach (var i in Model)
+        {
+        <tr>
+            <td>@i.CategoryID</td>
+            <td>@i.CategoryName</td>
+            <td>@i.CategoryStatus</td>
+        </tr>
+        }
+    </table>
+    <br />
+    <a href="/Category/AddCategory" class="btn-info">Yeni Kategori</a>
 </body>
 </html>
