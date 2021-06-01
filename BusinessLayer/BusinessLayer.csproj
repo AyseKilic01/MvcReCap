@@ -57,6 +57,7 @@
     <Compile Include="Concrete\ContactManager.cs" />
     <Compile Include="Concrete\HeadingManager.cs" />
     <Compile Include="Concrete\WriterManager.cs" />
+    <Compile Include="Abstract\IGenericService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
