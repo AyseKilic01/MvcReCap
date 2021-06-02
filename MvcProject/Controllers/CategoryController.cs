@@ -11,7 +11,7 @@ namespace MvcProject.Controllers
     public class CategoryController : Controller
     {
         // GET: Category
-        CategoryManager category = new CategoryManager();
+        CategoryManager category;
         public ActionResult Index()
         {
             return View();
