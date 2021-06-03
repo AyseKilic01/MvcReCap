@@ -1,9 +1,6 @@
 ﻿using BusinessLayer.Concrete;
+using DataAccess.Concrete.EntityFramework;
 using EntityLayer.Concrete;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
 using System.Web.Mvc;
 
 namespace MvcProject.Controllers
@@ -11,7 +8,7 @@ namespace MvcProject.Controllers
     public class CategoryController : Controller
     {
         // GET: Category
-        CategoryManager category;
+        CategoryManager category = new CategoryManager(new EfCategoryDAL());
         public ActionResult Index()
         {
             return View();
