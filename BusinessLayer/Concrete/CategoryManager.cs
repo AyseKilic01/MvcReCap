@@ -1,4 +1,6 @@
-﻿using DataAccess.Abstract;
+﻿using BusinessLayer.Abstract;
+using BusinessLayer.ValidationRules;
+using DataAccess.Abstract;
 using DataAccess.Concrete.Repositories;
 using EntityLayer.Concrete;
 using System;
@@ -9,7 +11,7 @@ using System.Threading.Tasks;
 
 namespace BusinessLayer.Concrete
 {
-   public class CategoryManager
+   public class CategoryManager : IGenericService<Category>
     {
         //GenericRepository<Category> repository = new GenericRepository<Category>();
         //böl parçala yönet
@@ -28,9 +30,25 @@ namespace BusinessLayer.Concrete
         {
             return _dal.List();
         }
-        public void CategoryAdd(Category p)
+        public void Add(Category p)
         {
+            
             _dal.Insert(p);
+        }
+
+        public List<Category> GetAllBL(int id)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void Update(Category prop)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void Delete(Category prop)
+        {
+            throw new NotImplementedException();
         }
     }
 }
