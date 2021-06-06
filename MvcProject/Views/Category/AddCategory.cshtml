@@ -1,4 +1,5 @@
 ﻿@model EntityLayer.Concrete.Category
+@* classlarını model olarak ekliyorsun *@
 @{
     Layout = null;
 }
@@ -12,17 +13,24 @@
     <title>AddCategory</title>
 </head>
 <body>
-  @* hangi action, hangi controller, hangi metodda çalışacak *@
- @using (Html.BeginForm("AddCategory","Category",FormMethod.Post))
- {
-     <div class="form-group">
-
-     </div>
- }
+    @* hangi action, hangi controller, hangi metodda çalışacak *@
+    @using (Html.BeginForm("AddCategory", "Category", FormMethod.Post))
+    {
+        <div class="form-group">
+            @Html.Label("Kategori Adı")
+            @Html.TextBoxFor(x=>x.CategoryName)
+            @Html.ValidationMessageFor(x=>x.CategoryName)
+            <br /><br />
+            @Html.Label("Kategori Açıklama")
+            @Html.TextBoxFor(x=>x.CategoryDescription)
+            <br /><br />
+            <button id="btnKaydet">Kaydet</button>
+        </div>
+    }
     @*<form class="form-group" method="post">
-        <input type="text" placeholder="Lütfen bir şeyler yazınız : " class="form-control" name="CategoryName" />
-        <br />
-        <button class="btn-light">Ekle</button>
-    </form>*@
+            <input type="text" placeholder="Lütfen bir şeyler yazınız : " class="form-control" name="CategoryName" />
+            <br />
+            <button class="btn-light">Ekle</button>
+        </form>*@
 </body>
 </html>
