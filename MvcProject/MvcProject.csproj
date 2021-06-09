@@ -163,6 +163,7 @@
     <Content Include="AdminLTE-3.0.4\dist\css\alt\adminlte.pages.min.css" />
     <Content Include="AdminLTE-3.0.4\dist\css\alt\adminlte.plugins.css" />
     <Content Include="AdminLTE-3.0.4\dist\css\alt\adminlte.plugins.min.css" />
+    <Content Include="AdminLTE-3.0.4\dist\img\ayse.jpg" />
     <Content Include="AdminLTE-3.0.4\dist\img\2.png" />
     <Content Include="AdminLTE-3.0.4\dist\img\4.png" />
     <Content Include="AdminLTE-3.0.4\dist\img\AdminLTELogo.png" />
