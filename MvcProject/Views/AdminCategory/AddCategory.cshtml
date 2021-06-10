@@ -1,16 +1,14 @@
 ﻿@model EntityLayer.Concrete.Category
-@* classlarını model olarak ekliyorsun *@
 @{
     Layout = null;
 }
-
 <!DOCTYPE html>
 
 <html>
 <head>
     <meta name="viewport" content="width=device-width" />
     <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
-    <title>Yeni Kategori Ekleme</title>
+    <title>AddCategory</title>
 </head>
 <body>
     <div>
@@ -19,16 +17,15 @@
         <br />
     </div>
     @* hangi action, hangi controller, hangi metodda çalışacak *@
-   
-    @using (Html.BeginForm("Index", "AdminCategory", FormMethod.Post))
+    @using (Html.BeginForm("AddCategory", "AdminCategory", FormMethod.Post))
     {
         <div class="form-group">
             @Html.Label("Kategori Adı")
-            @Html.TextBoxFor(x=>x.CategoryName, new { @class = "form-control"})
-            @Html.ValidationMessageFor(x=>x.CategoryName)
+            @Html.TextBoxFor(x => x.CategoryName)
+            @Html.ValidationMessageFor(x => x.CategoryName)
             <br /><br />
             @Html.Label("Kategori Açıklama")
-            @Html.TextBoxFor(x=>x.CategoryDescription, new { @class = "form-control" })
+            @Html.TextBoxFor(x => x.CategoryDescription)
             <br /><br />
             <button id="btnKaydet">Kaydet</button>
         </div>

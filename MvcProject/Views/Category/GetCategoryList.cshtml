@@ -16,20 +16,18 @@
     </div>
     <table class="table table-hover">
         <tr>
-            <th>ID</th>
-            <th>Ad</th>
-            <th>Durum</th>
+            <th>#</th>
+            <th>Kategori Adı</th>
         </tr>
         @foreach (var i in Model)
         {
         <tr>
             <td>@i.CategoryID</td>
             <td>@i.CategoryName</td>
-            <td>@i.CategoryStatus</td>
         </tr>
         }
     </table>
     <br />
-    <a href="/Category/AddCategory" class="btn-info">Yeni Kategori</a>
+    <a href="/Category/AddCategory" class="btn-info">Yeni Kategori Ekle</a>
 </body>
 </html>
