@@ -9,5 +9,6 @@ namespace BusinessLayer.Abstract
             void Add(T prop);
             void Update(T prop);
             void Delete(T prop);
+            T GetByID(int id);
     }
 }

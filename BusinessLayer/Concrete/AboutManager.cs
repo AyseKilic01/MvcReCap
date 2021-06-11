@@ -40,6 +40,11 @@ namespace BusinessLayer.Concrete
             throw new NotImplementedException();
         }
 
+        public About GetByID(int id)
+        {
+            return _dal.Get(x => x.AboutID == id);
+        }
+
         public void Update(About prop)
         {
             throw new NotImplementedException();

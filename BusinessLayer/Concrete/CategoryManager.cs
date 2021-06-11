@@ -50,5 +50,10 @@ namespace BusinessLayer.Concrete
         {
             throw new NotImplementedException();
         }
+
+        public Category GetByID(int id)
+        {
+            return _dal.Get(x => x.CategoryID == id);
+        }
     }
 }
