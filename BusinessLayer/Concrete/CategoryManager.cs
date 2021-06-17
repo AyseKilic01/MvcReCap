@@ -48,7 +48,7 @@ namespace BusinessLayer.Concrete
 
         public void Delete(Category prop)
         {
-            throw new NotImplementedException();
+            _dal.Delete(prop);
         }
 
         public Category GetByID(int id)
