@@ -49,5 +49,13 @@ namespace MvcProject.Controllers
             //redirectto ile başka bir view e yönlendirme yapabilirsin.
             return RedirectToAction("Index");
         }
+        [HttpGet]
+        public ActionResult UpdateCategory(int id)
+        {
+            var categoryvalue = category.GetByID(id);
+            category.Update(categoryvalue);
+            //redirectto ile başka bir view e yönlendirme yapabilirsin.
+            return View(categoryvalue);
+        }
     }
 }

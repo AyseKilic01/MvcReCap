@@ -43,7 +43,7 @@ namespace BusinessLayer.Concrete
 
         public void Update(Category prop)
         {
-            throw new NotImplementedException();
+            _dal.Update(prop);
         }
 
         public void Delete(Category prop)
