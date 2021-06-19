@@ -5,6 +5,7 @@ using DataAccess.Concrete.Repositories;
 using EntityLayer.Concrete;
 using System;
 using System.Collections.Generic;
+using System.Data.Entity;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -43,6 +44,7 @@ namespace BusinessLayer.Concrete
 
         public void Update(Category prop)
         {
+            EntityState.Modified(prop);
             _dal.Update(prop);
         }
 

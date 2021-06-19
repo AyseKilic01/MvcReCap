@@ -57,5 +57,11 @@ namespace MvcProject.Controllers
             //redirectto ile başka bir view e yönlendirme yapabilirsin.
             return View(categoryvalue);
         }
+        [HttpPost]
+        public ActionResult UpdateCategory(Category categoryx)
+        {
+            category.Update(categoryx);
+            return RedirectToAction("Index");
+        }
     }
 }
