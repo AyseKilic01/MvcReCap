@@ -33,7 +33,6 @@ namespace BusinessLayer.Concrete
         }
         public void Add(Category p)
         {
-            
             _dal.Insert(p);
         }
 
@@ -44,7 +43,6 @@ namespace BusinessLayer.Concrete
 
         public void Update(Category prop)
         {
-            EntityState.Modified(prop);
             _dal.Update(prop);
         }
 
@@ -56,6 +54,10 @@ namespace BusinessLayer.Concrete
         public Category GetByID(int id)
         {
             return _dal.Get(x => x.CategoryID == id);
+        }
+        public int GetCount()
+        {
+            return _dal.Count();
         }
     }
 }

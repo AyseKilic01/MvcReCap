@@ -1,0 +1,19 @@
+﻿@model EntityLayer.Concrete.Category
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+    <title>İstatistik</title>
+</head>
+<h2>Index</h2>
+
+@using (Html.BeginForm("GetCCount", "Statistic", FormMethod.Post))
+{
+    <div class="accent-blue">
+        Merhaba
+    </div>
+}
+<br />

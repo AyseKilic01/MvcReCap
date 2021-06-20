@@ -63,5 +63,9 @@ namespace MvcProject.Controllers
             category.Update(categoryx);
             return RedirectToAction("Index");
         }
+        public ActionResult GetCategoryList()
+        {
+            return RedirectToAction("Index");
+        }
     }
 }

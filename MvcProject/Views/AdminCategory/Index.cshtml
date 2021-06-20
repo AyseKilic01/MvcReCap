@@ -11,24 +11,45 @@
 </head>
 <body>
 <h2>Index</h2>
+<button onclick="myFunction()">ENG</button>
 
 <table class="table table-hover" style="margin-top:20px">
     <tr>
-        <th>#</th>
+        @*       <th>#</th>*@
         <th>Kategori Adı</th>
-        <td>Sil</td>
-        <td>Güncelle</td>
-        <td>Başlıklar</td>
+        <th>Kategori Açıklaması</th>
+        <th>Başlıklar</th>
+        <th>Düzenle</th>
+
     </tr>
     @foreach (var i in Model)
     {
-        <tr>
-            <td>@i.CategoryID</td>
-            <td>@i.CategoryName</td>
-            <td><a href="/AdminCategory/DeleteCategory/@i.CategoryID" class="btn btn-danger">Sil</a></td>
-            <td><a href="/AdminCategory/UpdateCategory/@i.CategoryID" class="btn btn-info">Güncelle</a></td>
-            <td><a href="" class="btn btn-primary">Başlıklar</a></td>
-        </tr>
+    <tr>
+        @*   <td>@i.CategoryID</td>*@
+        <td>@i.CategoryName</td>
+        <td>@i.CategoryDescription</td>
+        <td><a href="" class="btn btn-primary">Başlıklar</a></td>
+        <td>
+            <a href="/AdminCategory/DeleteCategory/@i.CategoryID" class="btn btn-danger" id="delete">
+                Sil
+                <script>
+                    function myFunction() {
+                        document.getElementById("delete").innerHTML = "Delete";
+                    }
+                </script>
+
+            </a>
+            <a href="/AdminCategory/UpdateCategory/@i.CategoryID" class="btn btn-info" id="update">
+                Güncelle
+                <script>
+                    function myFunction() {
+                        document.getElementById("update").innerHTML = "Update";
+                    }
+                </script>
+            </a>
+        </td>
+
+    </tr>
     }
 </table>
 <br />

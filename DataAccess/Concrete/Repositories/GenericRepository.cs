@@ -19,8 +19,12 @@ namespace DataAccess.Concrete.Repositories
         
         public void Delete(T p)
         {
-            _object.Remove(p);
-            c.SaveChanges();
+            using (MvcContext context = new MvcContext())
+            {
+                var entity = context.Entry(p);
+                entity.State = EntityState.Deleted;
+                context.SaveChanges();
+            }
         }
 
         public T Get(Expression<Func<T, bool>> filter)
@@ -30,8 +34,12 @@ namespace DataAccess.Concrete.Repositories
 
         public void Insert(T p)
         {
-            _object.Add(p);
-            c.SaveChanges();
+            using (MvcContext context = new MvcContext())
+            {
+                var entity = context.Entry(p);
+                entity.State = EntityState.Added;
+                context.SaveChanges();
+            }
         }
 
         public List<T> List()
@@ -46,7 +54,16 @@ namespace DataAccess.Concrete.Repositories
 
         public void Update(T p)
         {
-            c.SaveChanges();
+            using (MvcContext context = new MvcContext())
+            {
+                var entity = context.Entry(p);
+                entity.State = EntityState.Modified;
+                context.SaveChanges();
+            }
+        }
+        public int Count()
+        {
+            return c.Categories.Count();
         }
     }
 }
