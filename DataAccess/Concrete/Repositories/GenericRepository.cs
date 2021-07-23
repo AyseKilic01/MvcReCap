@@ -63,7 +63,8 @@ namespace DataAccess.Concrete.Repositories
         }
         public int Count()
         {
-            return c.Categories.Count();
+            int count = (from x in c.Categories select x).Count();
+            return count;
         }
     }
 }
