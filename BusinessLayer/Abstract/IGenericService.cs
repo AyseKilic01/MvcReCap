@@ -10,5 +10,6 @@ namespace BusinessLayer.Abstract
             void Update(T prop);
             void Delete(T prop);
             T GetByID(int id);
+            int GetCount();
     }
 }

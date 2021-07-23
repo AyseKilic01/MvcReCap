@@ -44,6 +44,11 @@ namespace BusinessLayer.Concrete
             return _dal.Get(x=>x.ContactID == id);
         }
 
+        public int GetCount()
+        {
+            throw new NotImplementedException();
+        }
+
         public void Update(Contact prop)
         {
             _dal.Update(prop);

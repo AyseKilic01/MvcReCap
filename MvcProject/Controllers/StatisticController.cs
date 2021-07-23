@@ -12,7 +12,8 @@ namespace MvcProject.Controllers
         // GET: Statistic
         public ActionResult Index()
         {
-            return View();
+            var categoryvalues = category.GetCount();
+            return View(categoryvalues);
         }
         [HttpPost]
         public ActionResult GetCCount()

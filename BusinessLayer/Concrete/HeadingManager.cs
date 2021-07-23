@@ -44,6 +44,11 @@ namespace BusinessLayer.Concrete
             return _dal.Get(x => x.HeadingID == id);
         }
 
+        public int GetCount()
+        {
+            throw new NotImplementedException();
+        }
+
         public void Update(Heading prop)
         {
             _dal.Update(prop);

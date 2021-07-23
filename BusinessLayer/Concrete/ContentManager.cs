@@ -44,6 +44,11 @@ namespace BusinessLayer.Concrete
             return _dal.Get(x => x.ContentID == id);
         }
 
+        public int GetCount()
+        {
+            throw new NotImplementedException();
+        }
+
         public void Update(Content prop)
         {
             _dal.Update(prop);
